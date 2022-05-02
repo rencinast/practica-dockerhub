@@ -12,6 +12,17 @@ job('practica nodejs dockerhub') {
     wrappers {
         nodejs('nodejs')
     }
+	
+    steps {
+	dockerBuildAndPublish {
+        repositoryName('rencinas123/practica_docker_hub')
+        tag('${GIT_REVISION,length=7}')
+        registryCredentials('docker-hub')
+        forcePull(false)
+        createFingerprints(false)
+        skipDecorate()
+        }
+    }
 
     publishers {
 	slackNotifier {
