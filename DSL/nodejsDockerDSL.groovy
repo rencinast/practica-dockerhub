@@ -1,5 +1,5 @@
 job('practica nodejs dockerhub') {
-    description('Aplicación Node JS Docker DSL para el curso de Jenkins')
+    description('pracktica de docker')
     scm {
         git('https://github.com/rencinast/practica-dockerhub.git', 'master') { node ->
             node / gitConfigName('rencinast')
