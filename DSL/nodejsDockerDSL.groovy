@@ -14,7 +14,7 @@ job('practica nodejs dockerhub') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName('rencinas123/nodejsapp')
+            repositoryName('rencinas123/practica_docker_hub')
             tag('${GIT_REVISION,length=7}')
             registryCredentials('docker-hub')
             forcePull(false)
